@@ -530,3 +530,81 @@ body {
 	font-weight:600;
 	text-shadow: 0px 1px 0px rgba(250,250,250, .75);
 }
+
+/* Elegant Form */
+
+form {
+  max-width: 600px;
+  text-align: center;
+  margin: 20px auto;
+}
+form input, form textarea {
+  border: 0;
+  outline: 0;
+  padding: 1em;
+  display: block;
+  width: 100%;
+  margin-top: 1em;
+  font-family: 'Open Sans', sans-serif;
+  -moz-box-shadow: 0 0px 7px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0px 7px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 7px rgba(0, 0, 0, 0.1);
+  resize: none;
+}
+form input:focus, form textarea:focus {
+  -moz-box-shadow: 0 0px 2px #F05F40 !important;
+  -webkit-box-shadow: 0 0px 2px #F05F40 !important;
+  box-shadow: 0 0px 2px #F05F40 !important;
+}
+form #input-submit {
+  color: white;
+  background: #F05F40;
+  cursor: pointer;
+}
+form #input-submit:hover {
+  -moz-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  -webkit-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+}
+form textarea {
+  height: 126px;
+}
+
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+.right {
+  width: 50%;
+}
+
+.left {
+  margin-right: 2%;
+}
+
+@media (max-width: 480px) {
+  .half {
+    width: 100%;
+    float: none;
+    margin-bottom: 0;
+  }
+}
+/* Clearfix */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+#contact-header {
+  text-align: center;
+  font-family: 'Hind', sans-serif;
+}
