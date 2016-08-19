@@ -613,3 +613,7 @@ form textarea {
   margin-top: 1rem;
   color: #F05F40;
 }
+
+.optional {
+  color: gray
+}

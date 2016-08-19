@@ -44,7 +44,7 @@ $(document).ready(function() {
       var regex = /^\d{10}$/;
       if(!regex.test($("#input-phone").val())) {
         $("#error-phone").hide();
-        $("#error-phone").text("Please Enter a Valid Phone Number");
+        $("#error-phone").text("Yes! It is optional, but we would like to have a valid phone number if you wish");
         $("#error-phone").show();
       } else {
         $("#error-phone").hide();
@@ -64,7 +64,7 @@ $(document).ready(function() {
   });
   $("#contact-form").submit(function(event) {
     event.preventDefault();
-    if((nameValid && emailValid && phoneValid && messageValid)) {
+    if((nameValid && emailValid && messageValid)) {
       $("#error-submit").hide();
       $.ajax({
         url: "https://formspree.io/willie@allcal.com",
@@ -75,7 +75,20 @@ $(document).ready(function() {
           email: $("#input-email").val(),
           message: $("#input-message").val(),
         },
-        dataType: "json"
+        dataType: "json",
+        success: function() {
+          $("#error-submit").css("color", "#22993c");
+          $("#error-submit").text("Your response has been submitted. We will contact you as soon as possible :) ");
+          $("#error-submit").show();
+          $("#input-name").val("");
+          $("#input-phone").val("");
+          $("#input-email").val("");
+          $("#input-message").val("");
+        },
+        error: function() {
+          $("#error-submit").text("There was a problem with the system while submitting your response. We apologize for any inconvenience this has caused you. Could you please try again?");
+          $("#error-submit").show();
+        }
       });
     } else {
       $("#error-submit").hide();
