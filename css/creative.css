@@ -608,3 +608,8 @@ form textarea {
   text-align: center;
   font-family: 'Hind', sans-serif;
 }
+
+.errors {
+  margin-top: 1rem;
+  color: #F05F40;
+}

@@ -269,16 +269,19 @@
             <br><br>
             <h2 class="section-heading text-center">Contact Form</h2>
             <hr class="primary"/>
-            <form class="cf" action="https://formspree.io/willie@allcal.com" method="POST">
-              <div class="half left cf">
+            <form class="cf" id="contact-form">
+              <div class="cf">
                 <input type="text" id="input-name" name="Name" placeholder="Name" />
+                <p class="errors" id="error-name">This is the error area</p>
                 <input type="email" id="input-email" name="Email Address" placeholder="Email address" />
+                <p class="errors" id="error-email">This is the error area</p>
                 <input type="number" id="input-phone" name="Phone Number" placeholder="Phone Number" />
-              </div>
-              <div class="half right cf">
+                <p class="errors" id="error-phone">This is the error area</p>
                 <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+                <p class="errors" id="error-message">This is the error area</p>
               </div>
               <input type="submit" value="Submit" id="input-submit" />
+              <p class="errors" id="error-submit">This is the error area</p>
             </form>
           </div>
         </div>
@@ -297,6 +300,7 @@
 
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
+    <script src="js/form-validation.js"></script>
 
 </body>
 
