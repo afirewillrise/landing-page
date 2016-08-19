@@ -67,12 +67,12 @@ $(document).ready(function() {
     if((nameValid && emailValid && phoneValid && messageValid)) {
       $("#error-submit").hide();
       $.ajax({
-        url: "https://formspree.io/monish@allcal.com",
+        url: "https://formspree.io/willie@allcal.com",
         method: "POST",
         data: {
           name: $("#input-name").val(),
           phone: $("#input-phone").val(),
-          email: $("#input-email").val(), 
+          email: $("#input-email").val(),
           message: $("#input-message").val(),
         },
         dataType: "json"
